@@ -1,0 +1,35 @@
+---
+const pasos = [
+    { num: "01", titulo: "Purificación del agua", texto: "Tratamos el agua con filtros de carbón activo y ósmosis inversa para garantizar máxima pureza." },
+    { num: "02", titulo: "Congelado controlado", texto: "Equipos de última generación producen hielo de forma continua bajo estrictos controles de temperatura." },
+    { num: "03", titulo: "Control de calidad", texto: "Cada lote se analiza microbiológicamente antes de ser aprobado para su distribución." },
+    { num: "04", titulo: "Envasado y distribución", texto: "Envasamos al vacío y despachamos en flota refrigerada propia en menos de 4 horas." },
+];
+---
+
+<section id="proceso" class="py-28 px-8 md:px-20 bg-[#0D1B2A]">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-16">
+        <p class="text-xs tracking-[0.4em] uppercase text-[#3B9ED4] mb-4 font-medium">Cómo lo hacemos</p>
+        <h2 class="font-['Bebas_Neue'] text-6xl md:text-7xl text-white leading-none">PROCESO</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1a2e40]">
+        {pasos.map(p => (
+            <div class="bg-[#0D1B2A] p-8 border-t-2 border-transparent hover:border-[#3B9ED4] transition-all duration-300 group">
+            <p class="font-['Bebas_Neue'] text-6xl text-[#1a2e40] group-hover:text-[#3B9ED4] transition-colors duration-300 leading-none mb-6">{p.num}</p>
+            <h3 class="text-white font-medium text-base mb-3 tracking-wide">{p.titulo}</h3>
+            <p class="text-sm font-light text-[#4A6070] leading-relaxed">{p.texto}</p>
+            </div>
+        ))}
+        </div>
+
+        <!-- Certificaciones -->
+        <div class="mt-20 pt-10 border-t border-[#1a2e40] flex flex-wrap gap-10 items-center">
+        <p class="text-xs tracking-[0.4em] uppercase text-[#4A6070]">Certificaciones</p>
+        {["SENASA", "ISO 22000", "Bromatología", "BPM"].map(c => (
+            <span class="text-sm tracking-widest text-white uppercase border border-[#1a2e40] px-4 py-2">{c}</span>
+        ))}
+        </div>
+    </div>
+</section>

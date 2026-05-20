@@ -1,0 +1,57 @@
+---
+---
+<section id="contacto" class="py-28 px-8 md:px-20 bg-[#F4F7F9]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+        <!-- Info -->
+        <div>
+        <p class="text-xs tracking-[0.4em] uppercase text-[#3B9ED4] mb-4 font-medium">Hablemos</p>
+        <h2 class="font-['Bebas_Neue'] text-6xl md:text-7xl text-[#0D1B2A] leading-none mb-8">CONTACTO</h2>
+        <p class="text-base font-light text-[#4A6070] leading-relaxed mb-12 max-w-sm">
+            Trabajamos con distribuidores, restaurantes, industrias y eventos. Cotizá sin compromiso.
+        </p>
+        <div class="space-y-6">
+            {[
+            { label: "Teléfono", value: "+54 3572 548014" },
+            { label: "Email", value: "joelhuzuliakdev@outlook.com" },
+            { label: "Dirección", value: "Juan Domingo Peron 1745" },
+            { label: "Horario", value: "Lun–Sáb, 6:00 a 20:00 hs" },
+            ].map(item => (
+            <div class="border-b border-[#D0DDE6] pb-4">
+                <p class="text-xs tracking-widest uppercase text-[#3B9ED4] mb-1">{item.label}</p>
+                <p class="text-sm text-[#0D1B2A]">{item.value}</p>
+            </div>
+            ))}
+        </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="bg-white border border-[#D0DDE6] p-10">
+        <form class="space-y-6">
+            <div>
+            <label class="text-xs tracking-widest uppercase text-[#4A6070] block mb-2">Nombre y empresa</label>
+            <input type="text" class="w-full border border-[#D0DDE6] bg-transparent px-4 py-3 text-sm text-[#0D1B2A] focus:outline-none focus:border-[#3B9ED4] transition-colors" placeholder="Juan García — Bar El Almacén" />
+            </div>
+            <div>
+            <label class="text-xs tracking-widest uppercase text-[#4A6070] block mb-2">Email</label>
+            <input type="email" class="w-full border border-[#D0DDE6] bg-transparent px-4 py-3 text-sm text-[#0D1B2A] focus:outline-none focus:border-[#3B9ED4] transition-colors" placeholder="juan@empresa.com" />
+            </div>
+            <div>
+            <label class="text-xs tracking-widest uppercase text-[#4A6070] block mb-2">Producto de interés</label>
+            <select class="w-full border border-[#D0DDE6] bg-white px-4 py-3 text-sm text-[#4A6070] focus:outline-none focus:border-[#3B9ED4] transition-colors appearance-none">
+                <option>Hielo en cubos</option>
+                <option>Hielo escama</option>
+                <option>Hielo en bolsa</option>
+                <option>Hielo seco</option>
+            </select>
+            </div>
+            <div>
+            <label class="text-xs tracking-widest uppercase text-[#4A6070] block mb-2">Mensaje</label>
+            <textarea rows="4" class="w-full border border-[#D0DDE6] bg-transparent px-4 py-3 text-sm text-[#0D1B2A] focus:outline-none focus:border-[#3B9ED4] transition-colors resize-none" placeholder="Contanos el volumen aproximado que necesitás..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-[#0D1B2A] text-white text-sm tracking-widest uppercase py-4 hover:bg-[#3B9ED4] transition-colors duration-300">
+            Enviar consulta
+            </button>
+        </form>
+        </div>
+    </div>
+</section>
